@@ -1,0 +1,22 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.6.0/schema.json",
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"ignore": [
+			"apps/**/playwright.config.ts",
+			"apps/**/mockServiceWorker.js"
+		],
+		"rules": {
+			"recommended": true,
+			"suspicious": {
+				"noExplicitAny": "warn"
+			},
+			"complexity": {
+				"noStaticOnlyClass": "off"
+			}
+		}
+	}
+}

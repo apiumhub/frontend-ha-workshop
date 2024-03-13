@@ -1,0 +1,14 @@
+.domain {
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__submit {
+        margin-top: 18px;
+    }
+
+    &__divider {
+        margin: 50px 0;
+    }
+}

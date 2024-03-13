@@ -1,1 +1,12 @@
-<workshop-nx-welcome></workshop-nx-welcome> <router-outlet></router-outlet>
+<mat-toolbar color="primary" class="toolbar">
+    <span>Workshop</span>
+    <mat-button-toggle-group>
+        <mat-button-toggle routerLink="/exercise1" routerLinkActive="active">Exercise 1</mat-button-toggle>
+        <mat-button-toggle routerLink="/exercise2" routerLinkActive="active">Exercise 2</mat-button-toggle>
+        <mat-button-toggle routerLink="/exercise3" routerLinkActive="active">Exercise 3</mat-button-toggle>
+        <mat-button-toggle routerLink="/exercise4" routerLinkActive="active">Exercise 4</mat-button-toggle>
+    </mat-button-toggle-group>
+</mat-toolbar>
+<div class="content">
+    <router-outlet></router-outlet>
+</div>

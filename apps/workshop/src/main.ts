@@ -1,7 +1,21 @@
-import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
+import { bootstrapApplication } from "@angular/platform-browser";
+import { AppComponent } from "./app/app.component";
+import { appConfig } from "./app/app.config";
+import { isDevMode } from "@angular/core";
+import { setupWorker } from "msw/browser";
+import { handlers } from "./handlers";
 
-bootstrapApplication(AppComponent, appConfig).catch((err) =>
-  console.error(err)
-);
+async function prepareApp() {
+	if (isDevMode()) {
+		const worker = setupWorker(...handlers);
+		return worker.start();
+	}
+
+	return Promise.resolve();
+}
+
+prepareApp().then(() => {
+	bootstrapApplication(AppComponent, appConfig).catch((err) =>
+		console.error(err),
+	);
+});

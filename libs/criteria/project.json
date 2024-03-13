@@ -1,0 +1,9 @@
+{
+  "name": "criteria",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/criteria/src",
+  "prefix": "workshop",
+  "tags": [],
+  "projectType": "library",
+  "targets": {}
+}

@@ -1,0 +1,23 @@
+<h1>Create an application that returns the winner of rock paper scissors.
+    The ui is given, we need to implement the logic to determine the winner and adapt the result.</h1>
+<h2>
+    The winner is determined by the following rules:
+    <workshop-rules></workshop-rules>
+</h2>
+
+<h1>Game</h1>
+
+<div class="rps__options">
+    <mat-button-toggle-group name="option1" [formControl]="option1" aria-label="Font Style">
+        <mat-button-toggle value="rock">Rock</mat-button-toggle>
+        <mat-button-toggle value="paper">Paper</mat-button-toggle>
+        <mat-button-toggle value="scissors">Scissors</mat-button-toggle>
+    </mat-button-toggle-group>
+
+    <mat-button-toggle-group name="option2" [formControl]="option2" aria-label="Font Style">
+        <mat-button-toggle value="rock">Rock</mat-button-toggle>
+        <mat-button-toggle value="paper">Paper</mat-button-toggle>
+        <mat-button-toggle value="scissors">Scissors</mat-button-toggle>
+    </mat-button-toggle-group>
+</div>
+<h2>Winner: {{getResult()}}</h2>

@@ -1,0 +1,26 @@
+<h1>Cat entity is given with simple data for the purpose of this exercise. We need to implement 3 different
+    repository implementations for getting the data needed to show in the table. Those repositories should be: using
+    HttpClient from Angular, using
+    Fetch and using Axios. (Axios is already installed, and there's a MockServiceWorker that will intercept the requests
+    and return the data needed)
+    <br>The ui is given
+</h1>
+<table mat-table [dataSource]="cats" class="mat-elevation-z8">
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="age">
+        <th mat-header-cell *matHeaderCellDef> Human Age </th>
+        <td mat-cell *matCellDef="let element"> {{element.getHumanAge()}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="color">
+        <th mat-header-cell *matHeaderCellDef> Color </th>
+        <td mat-cell *matCellDef="let element"> {{element.color}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

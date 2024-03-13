@@ -1,0 +1,18 @@
+.rps {
+    &__title {
+        font-size: 48px;
+        align-self: center;
+        margin-bottom: 20px;
+    }
+
+    &__options {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__winner {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+}
